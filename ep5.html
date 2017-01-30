@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJs Laracasts E5</title>
+    <style>
+        .color-red {color: red;}
+        .color-blue {color: blue;}
+        .is-loading { background: red;}
+    </style>
+</head>
+<body>
+
+<div id="root">
+    <button :class="{'is-loading': isLoading}" @click="toggleClass">ClickMe</button>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<script>
+
+    let app = new Vue({
+        el: "#root",
+        data: {
+            title: 'Now the title is being set through JS',
+            className: "color-red",
+            isLoading: false,
+        },
+        methods: {
+            toggleClass(){
+                this.isLoading = true;
+            },
+        },
+    });
+
+</script>
+
+</body>
+</html>
