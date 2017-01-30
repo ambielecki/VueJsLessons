@@ -12,7 +12,7 @@
 <body>
 
 <div id="root">
-    <button :class="{'is-loading': isLoading}" @click="toggleClass">ClickMe</button>
+    <button :disabled="disabled">ClickMe</button>
 </div>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -25,6 +25,7 @@
             title: 'Now the title is being set through JS',
             className: "color-red",
             isLoading: false,
+            disabled: true
         },
         methods: {
             toggleClass(){
